@@ -54,7 +54,7 @@
   background-color: orange;
 }
 
-.chapter4 {
+.chapter-4 {
   border-bottom: 3px solid gray;
   padding-bottom: 30px;
 }
@@ -87,4 +87,102 @@
 .chapter4-footer {
   height: 100px;
   background-color: blue;
+}
+
+.chapter-5 {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 3px solid gray;
+  padding-bottom: 30px;
+}
+
+.chapter5-heading {
+  display: block;
+  text-align: center;
+}
+
+.chapter5-nav-container {
+  padding: 15px 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.chapter5-nav {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.chapter5-box-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 35px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chapter5-box {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.chapter5-box1 {
+  background-color: #e6ffe9;
+}
+
+.chapter5-box2 {
+  background-color: #cbffd3;
+}
+
+.chapter5-box3 {
+  background-color: #aeffdb;
+}
+
+.chapter5-box4 {
+  background-color: #93ffab;
+}
+
+.chapter5-box5 {
+  background-color: #f3ffd8;
+}
+
+.chapter5-box6 {
+  background-color: #edffbe;
+}
+
+.chapter5-box7 {
+  background-color: #e9ffa5;
+}
+
+.chapter5-box8 {
+  background-color: #e4ff8d;
+}
+
+.chapter5-box9 {
+  background-color: #d9e5ff;
+}
+
+.chapter5-box10 {
+  background-color: #bad3ff;
+}
+
+.chapter5-box11 {
+  background-color: #a4c6ff;
+}
+
+.chapter5-box12 {
+  background-color: #8eb8ff;
+}
+
+.chapter5-footer {
+  width: 100%;
+  height: 120px;
+  background-color: gray;
+}
+
+.chapter5-footer-text {
+  color: white;
+  text-align: center;
+  line-height: 120px;
 }
