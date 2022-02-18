@@ -37,3 +37,54 @@
   background-color: blue;
   border: 5px solid yellow;
 }
+
+.chapter4-contents {
+  width: 100%;
+}
+
+.chapter4-top {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+}
+
+.chapter4-main-visual {
+  width: 100%;
+  height: 500px;
+  background-color: orange;
+}
+
+.chapter4 {
+  border-bottom: 3px solid gray;
+  padding-bottom: 30px;
+}
+
+.chapter4-main-contents {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.chapter4-left {
+  width: 230px;
+  height: 1400px;
+  background-color: palegreen;
+}
+
+.chapter4-main {
+  width: 500px;
+  height: 1400px;
+  background-color: green;
+}
+
+
+.chapter4-right {
+  width: 230px;
+  height: 1400px;
+  background-color: palegreen;
+}
+
+.chapter4-footer {
+  height: 100px;
+  background-color: blue;
+}
