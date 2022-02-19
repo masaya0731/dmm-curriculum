@@ -5,4 +5,5 @@ class HtmlController < ApplicationController
   
   def responsive
   end
+  
 end
