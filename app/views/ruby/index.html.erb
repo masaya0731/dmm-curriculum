@@ -30,4 +30,101 @@
     <p class="mt-3 chapter4-answer">A. name = "須藤政也"<br>
     puts name</p>
   </div>
+  <div class="ruby-chapter-5">
+    <h3 id="chapter5" class="mt-3 col-12">chapter5</h3>
+    <p>Q. 「国語」、「算数」、「理科」、「社会」という文字列を要素に持つ配列を変数に代入させ、「理科」を出力してください。変数名: subjects</p>
+    <p class="mt-3 chapter5-answer">A. subject = {"国語", "算数", "理科", "社会"}<br>
+    puts subjects[2]<span class="chapter5-commentary">(インデックス番号は0から)</span></p>
+  </div>
+  <div class="ruby-chapter-6">
+    <h3 id="chapter6" class="mt-3 col-12">chapter6</h3>
+    <p>Q. 所持金が100円より大きい場合は、"みかんを購入。所持金に余りあり。"と出力し、
+    所持金が100円ちょうどの場合は、"みかんを購入。所持金は0円。"と出力し、
+    所持金が100円より少ない場合は、"みかんを購入することができません。"と出力してください。
+    所持金の変数名： total_price</p>
+    <p class="chapter6-answer">A. total_price = 100<br>
+      if total_price > 100<br>
+      <span style="padding-left: 15px;">puts "みかんを購入。所持金にあまりあり。"</span><br>
+      elseif total_price == 100<br>
+      <span style="padding-left: 15px;">puts "みかんを購入。所持金は0円。"</span><br>
+      else<br>
+      <span style="padding-left: 15px;">puts "みかんを購入する事ができません。"</span><br>
+      end
+    </p>
+  </div>
+  <div class="ruby-chapter-7">
+    <h3 id="chapter7" class="mt-3 col-12">chapter7</h3>
+    <p>Q. 計算をはじめます<br>
+      何回計算を繰り返しますか？<br>
+      2　# 好きな数値を入力<br>
+      1回目の計算<br>
+      2つの値を入力してください<br>
+      4　# 好きな数値を入力<br>
+      2　# 好きな数値を入力<br>
+      a=4　# 入力した1つ目の数字が表示<br>
+      b=2　# 入力した2つ目の数字が表示<>br
+      計算結果を出力します<br>
+      a+b=6　# 入力した2つの数字の足し算結果が表示<br>
+      a-b=2　# 入力した2つの数字の引き算結果が表示<br>
+      a*b=8　# 入力した2つの数字の掛け算結果が表示<br>
+      a/b=2　# 入力した2つの数字の割り算結果が表示<be>
+      2回目の計算<br>
+      2つの値を入力してください<br>
+      6　# 好きな数値を入力<br>
+      3　# 好きな数値を入力<br>
+      a=6　# 入力した1つ目の数字が表示<br>
+      b=3　# 入力した2つ目の数字が表示<br>
+      計算結果を出力します<br>
+      a+b=9　# 入力した2つの数字の足し算結果が表示<br>
+      a-b=3　# 入力した2つの数字の引き算結果が表示<br>
+      a*b=18　# 入力した2つの数字の掛け算結果が表示<br>
+      a/b=2　# 入力した2つの数字の割り算結果が表示<br>
+      計算を終了します
+    </p>
+    <p class="chapter7-answer">A. puts "計算を始めます"<br>
+      puts "何回計算を繰り返しますか？"<br>
+      input = gets.to_i<br>
+      i = 1<br>
+      while i <= input do<br>
+      　puts "#{i}回目の計算"<br>
+      　puts "2つの値を入力してください"<br>
+      　a = gets.to_i<br>
+      　b = gets.to_i<br>
+      　puts "a = #{a}"<br>
+      　puts "b = #{b}"<br>
+      　puts "計算結果を出力します"<br>
+      　puts a + b = #{a + b}<br>
+      　puts a - b = #{a - b}<br>
+      　puts a * b = #{a * b}<br>
+      　puts a / b = #{a / b}<br>
+      　i += 1<br>
+      end<br>
+    </p>
+  </div>
+  <div class="ruby-chapter-8">
+    <h3 id="chapter8" class="mt-3 col-12">chapter8</h3>
+    <p>3で割り切れる数値を引数に渡すと、「Fizz」を返す<br>
+      5で割り切れる数値を引数に渡すと、「Buzz」を返す<br>
+      3と5の両方で割り切れる数値を引数に渡すと、「FizzBuzz」を返す<br>
+      それ以外の数値は、その数値を文字列に変えて返す<br>
+      また、引数として渡す値は、getsメソッドを使ってキーボードから入力できるようにしましょう。<br>
+    </p>
+    <p class="chapter8-answer">
+      def fizz_buzz(number)<br>
+      　if number % 3 == 0 && number % 5 == 0<br>
+      　　puts "FizzBuzz"<br>
+      　elsif number % 5 == 0<br>
+      　　puts "Buzz"<br>
+      　elsif number % 3 == 0<br>
+      　　puts "Fizz"<br>
+      　else<br>
+      　　number.to_s<br>
+      　end<br>
+      end<br>
+      puts "数字を入力してください。"<br>
+      input = gets.to_i<br>
+      puts "結果は..."<br>
+      puts fizz_buzz(input)<br>
+    </p>
+  </div>
 </div>
