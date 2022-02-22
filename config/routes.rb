@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # HTML
   resources :html, only: %i[index]
   get '/html/responsive', to: 'html#responsive'
-  
+
   # Ruby
   resources :ruby, only: %i[index]
 
