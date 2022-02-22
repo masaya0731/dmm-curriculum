@@ -73,3 +73,15 @@
   border-bottom: 1px solid black;
   display: inline-block;
 }
+
+.start-btn a {
+  display: inline-block;
+  color: gray;
+}
+
+.start-btn a:hover {
+  background-color: black;
+  display: inline-block;
+  color: white;
+
+}
