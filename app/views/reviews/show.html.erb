@@ -4,8 +4,8 @@
     <div class="mt-3 col-12"><b>Body:</b> <%= @post.body %></div>
   </div>
   <div class="mt-3">
-    <%= link_to "Edit", edit_review_path(@post), class: "review-btn" %>
+    <span class="review-btn"><%= link_to "Edit", edit_review_path(@post) %></span>
     |
-    <%= link_to "Back", reviews_path, class: "review-btn" %>
+    <span class="review-btn"><%= link_to "Back", reviews_path, class: "review-btn" %></span>
   </div>
 </div>
