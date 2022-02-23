@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  devise_for :users
   root to: 'homes#top'
   get '/reviews_top', to: 'homes#reviews_top'
 
@@ -12,5 +12,4 @@ Rails.application.routes.draw do
 
   # Bookers1
   resources :reviews
-
 end
