@@ -1,0 +1,2 @@
+class ReviewPost < ApplicationRecord
+end
