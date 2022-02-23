@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-
   def index
     @post = ReviewPost.new
     @posts = ReviewPost.all
@@ -36,5 +35,4 @@ class ReviewsController < ApplicationController
   def review_post_params
     params.require(:review_post).permit(:title, :body)
   end
-
 end
