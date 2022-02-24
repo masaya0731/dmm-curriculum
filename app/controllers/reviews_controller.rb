@@ -5,9 +5,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    post = ReviewPost.new(review_post_params)
-    post.save
-    redirect_to review_path(post.id)
+    @post = ReviewPost.new(review_post_params)
+    if @post.save
+      flash[:notice] = "Book was successfully created."
+      redirect_to review_path(@post)
+    else
+      @posts = ReviewPost.all
+      render :index
+    end
   end
 
   def show
@@ -19,14 +24,19 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    post = ReviewPost.find(params[:id])
-    post.update(review_post_params)
-    redirect_to review_path(post.id)
+    @post = ReviewPost.find(params[:id])
+    if @post.update(review_post_params)
+      flash[:notice] = "Book was successfully update."
+      redirect_to review_path(@post.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
     post = ReviewPost.find(params[:id])
     post.destroy
+    flash[:danger] = "Book was successfully destroyed."
     redirect_to reviews_path
   end
 
