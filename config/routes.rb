@@ -13,4 +13,9 @@ Rails.application.routes.draw do
 
   # Bookers1
   resources :reviews
+
+  # Bookers2
+  resources :again_users
+  resources :again_books
+
 end

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mt-3">
     <h3 class="col-12 font-weight-bold">Editing Book</h3>
-    <div class="col-12"><%= render 'layouts/error_messages', post: @post %></div>
+    <div class="col-12"><%= render 'error_messages', post: @post %></div>
     <%= form_with model:@post, url:"/reviews/#{@post.id}", local:true do |f| %>
       <h6 class="col-12">title</h6>
       <%= f.text_field :title, class: "col-12" %>
