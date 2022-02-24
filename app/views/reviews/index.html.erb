@@ -4,15 +4,17 @@
     <p class="bookers1-logo col-12"><%= link_to "Bookers1 Top", reviews_top_path %></p>
   </div>
   <div class="row">
+    <p class="flash-message text-success"><%= flash[:notice] %></p>
+    <p class="flash-message text-danger"><%= flash[:danger] %></p>
     <h3 class="col-12">Books</h3>
   </div>
   <div class="row">
-  <table class="col-12">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-      </tr>
+    <table class="col-12">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
       </thead>
       <tbody>
         <% @posts.each do |post| %>
@@ -26,10 +28,11 @@
             </td>
           </tr>
         <% end %>
-       </tbody>
-     </table>
-     <div class="row">
+      </tbody>
+    </table>
+    <div class="row">
       <h5 class="col-12 mt-3 font-weight-bold">New Book</h5>
+      <div class="col-12"><%= render 'layouts/error_messages', post: @post %></div>
       <%= form_with model:@post, url:'/reviews', local:true do |f| %>
         <h6 class="col-12">Title</h6>
         <%= f.text_field :title, class: "col-12" %>
