@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     again_user_path(resource)
   end
 
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path_for(_resource)
     again_top_path
   end
 
