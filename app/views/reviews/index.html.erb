@@ -32,7 +32,7 @@
     </table>
     <div class="row">
       <h5 class="col-12 mt-3 font-weight-bold">New Book</h5>
-      <div class="col-12"><%= render ':error_messages', post: @post %></div>
+      <div class="col-12"><%= render 'error_messages', post: @post %></div>
       <%= form_with model:@post, url:'/reviews', local:true do |f| %>
         <h6 class="col-12">Title</h6>
         <%= f.text_field :title, class: "col-12" %>
