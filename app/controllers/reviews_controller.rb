@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   def create
     @post = ReviewPost.new(review_post_params)
     if @post.save
-      flash[:notice] = "Book was successfully created."
+      flash[:notice] = 'Book was successfully created.'
       redirect_to review_path(@post)
     else
       @posts = ReviewPost.all
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
   def update
     @post = ReviewPost.find(params[:id])
     if @post.update(review_post_params)
-      flash[:notice] = "Book was successfully update."
+      flash[:notice] = 'Book was successfully update.'
       redirect_to review_path(@post.id)
     else
       render :edit
@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
   def destroy
     post = ReviewPost.find(params[:id])
     post.destroy
-    flash[:danger] = "Book was successfully destroyed."
+    flash[:danger] = 'Book was successfully destroyed.'
     redirect_to reviews_path
   end
 
