@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get '/reviews_top', to: 'homes#reviews_top'
   get '/again_top', to: 'homes#again_top'
+  get '/again_about', to: 'homes#again_about'
 
   # HTML
   resources :html, only: %i[index]
