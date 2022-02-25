@@ -1,1 +1,29 @@
 <%= render "layouts/again_header" %>
+<div class="container">
+  <div class="row mt-3">
+    <div class="mx-auto">
+      <h1 class="col-12">User info</h1>
+      <%= form_with model:@user, url:"/again_users/#{@user.id}", local:true do |f| %>
+
+        <div class="form-grop">
+          <label>Name</label><br>
+          <%= f.text_field :name, class:"form-control" %><br>
+        </div>
+        <div class="form-grop">
+          <label>Image</label><br>
+          <%= f.attachment_field :profile_image, class:"form-control-file" %><br>
+        </div>
+
+        <div class="form-grop">
+          <label>Introduction</label><br>
+          <%= f.text_area :introduction, class:"form-control" %><br>
+        </div>
+
+        <div class="form-grop">
+          <%= f.submit "Update User", class:"btn btn-secondary" %><br>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
