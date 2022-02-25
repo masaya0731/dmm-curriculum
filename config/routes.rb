@@ -24,5 +24,4 @@ Rails.application.routes.draw do
   # Bookers2
   resources :again_users, except: %i[new create destroy]
   resources :again_books, except: %i[new]
-
 end
