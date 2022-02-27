@@ -9,15 +9,20 @@ class AgainBooksController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @newbook = AgainBook.new
     @book = AgainBook.find(params[:id])
+    @user = @book.user
   end
 
   def edit; end
 
   def update; end
 
-  def destroy; end
+  def destroy
+    @book = AgainBook.find(params[:id])
+    @book.destroy
+    redirect_to again_books_path
+  end
 
   private
 
