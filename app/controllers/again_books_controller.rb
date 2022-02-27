@@ -8,7 +8,10 @@ class AgainBooksController < ApplicationController
     redirect_to again_books_path(@book) if @book.save
   end
 
-  def show; end
+  def show
+    @user = User.find(params[:id])
+    @book = AgainBook.find(params[:id])
+  end
 
   def edit; end
 
