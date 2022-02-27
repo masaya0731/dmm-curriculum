@@ -21,12 +21,12 @@
             <% user = User.find(book.user_id) %>
             <tr>
               <td>
-                <%= link_to again_user_path(user.id) do %>
+                <%= link_to again_user_path(user) do %>
                   <%= attachment_image_tag user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "50x50" %>
                 <% end %>
               </td>
               <td>
-                <%= link_to again_books_path(book.id) do %>
+                <%= link_to again_book_path(book) do %>
                   <%= book.title %>
                 <% end %>
               </td>
