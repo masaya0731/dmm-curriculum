@@ -1,5 +1,5 @@
 class AgainBooksController < ApplicationController
-  
+
   def index
     @books = AgainBook.all
     @book = AgainBook.new
@@ -19,9 +19,18 @@ class AgainBooksController < ApplicationController
     @user = @book.user
   end
 
-  def edit; end
+  def edit
+    @book = AgainBook.find(params[:id])
+    # 投稿がログイン中のユーザーと紐づいていなければマイページに遷移させる
+    redirect_to again_user_path(current_user) unless @book.user == current_user
+  end
 
-  def update; end
+  def update
+    @book = AgainBook.find(params[:id])
+    if @book.update(again_book_params)
+      redirect_to again_book_path(@book)
+    end
+  end
 
   def destroy
     @book = AgainBook.find(params[:id])

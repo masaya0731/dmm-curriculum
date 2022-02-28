@@ -1,5 +1,4 @@
 class AgainUsersController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @users = User.all
@@ -15,6 +14,8 @@ class AgainUsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    # ログインユーザーと検索か編集ボタンを押したユーザーのIDが一致しなければマイページに遷移にさせる
+    redirect_to again_user_path(current_user) unless @user == current_user
   end
 
   def update

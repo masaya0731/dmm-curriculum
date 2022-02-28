@@ -1,0 +1,24 @@
+<%= render "layouts/again_header" %>
+<div class="container">
+  <div class="row mt-3">
+    <div class="mx-auto">
+      <h1 class="col-12">Editing Book</h1>
+      <%= form_with model:@book, url:"/again_books/#{@book.id}", local:true do |f| %>
+
+        <div class="form-grop">
+          <label>Title</label><br>
+          <%= f.text_field :title, class:"form-control" %><br>
+        </div>
+        <div class="form-grop">
+          <label>Opinion</label><br>
+          <%= f.text_field :body, class:"form-control" %><br>
+        </div>
+
+        <div class="form-grop">
+          <%= f.submit "Update Books", class:"btn btn-success" %><br>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
