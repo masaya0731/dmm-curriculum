@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   # HTML
   resources :html, only: %i[index]
   get '/html/responsive', to: 'html#responsive'
+  # HTML開発スキルアップ
+  get 'html/skillup', to: 'html#skillup'
 
   # Ruby
   resources :ruby, only: %i[index]
