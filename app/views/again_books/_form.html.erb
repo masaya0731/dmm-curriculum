@@ -1,5 +1,6 @@
 <!-- Bookers2の新規投稿フォーム -->
 <%= form_with model:again_book, url:'/again_books', local:true do |f| %>
+  <%= render 'layouts/again_error_messages', model: f.object %>
 
   <div class="form-group">
     <label for="book_title">Title</label>
