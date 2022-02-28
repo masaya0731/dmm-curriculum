@@ -1,5 +1,7 @@
-<span class="again-top-logo"><%= link_to 'Topページ', root_path %></span>
+<!-- Bookers2のtopページ -->
+<span class="again-top-logo"><%= link_to 'Topページへ', root_path, class: "text-secondary" %></span>
 <%= render "layouts/again_header" %>
+<p class="text-success"><%= flash[:success] %></p>
 <div class="container mt-3">
   <div class="row">
     <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">

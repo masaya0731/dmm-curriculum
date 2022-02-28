@@ -1,4 +1,5 @@
 class AgainBooksController < ApplicationController
+  # Bookers2のコントローラー
   def index
     @books = AgainBook.all
     @book = AgainBook.new
@@ -9,7 +10,13 @@ class AgainBooksController < ApplicationController
     @user = current_user
     @book = AgainBook.new(again_book_params)
     @book.user_id = current_user.id
-    redirect_to again_books_path(@book) if @book.save
+    if @book.save
+      flash[:success] = 'You have created book successfully.'
+      redirect_to again_book_path(@book)
+    else
+      @books = AgainBook.all
+      render :index
+    end
   end
 
   def show
@@ -26,7 +33,12 @@ class AgainBooksController < ApplicationController
 
   def update
     @book = AgainBook.find(params[:id])
-    redirect_to again_book_path(@book) if @book.update(again_book_params)
+    if @book.update(again_book_params)
+      flash[:success] = 'You have updated book successfully.'
+      redirect_to again_book_path(@book)
+    else
+      render :edit
+    end
   end
 
   def destroy

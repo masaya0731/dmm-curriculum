@@ -1,3 +1,4 @@
+<!-- Bookers2の投稿編集画面 -->
 <%= render "layouts/again_header" %>
 <div class="container">
   <div class="row mt-3">
@@ -11,14 +12,17 @@
         </div>
         <div class="form-grop">
           <label>Opinion</label><br>
-          <%= f.text_field :body, class:"form-control" %><br>
+          <%= f.text_area :body, class:"form-control" %><br>
         </div>
 
-        <div class="form-grop">
+        <div class="form-grop mb-3">
           <%= f.submit "Update Books", class:"btn btn-success" %><br>
         </div>
+        <%= link_to "Show", again_book_path(@book) %>
+        |
+        <%= link_to "Back", again_books_path %>
       <% end %>
     </div>
   </div>
 </div>
-
+<%= render "layouts/again_footer" %>
