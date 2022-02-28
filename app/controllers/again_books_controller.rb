@@ -1,5 +1,10 @@
 class AgainBooksController < ApplicationController
-  def index; end
+  
+  def index
+    @books = AgainBook.all
+    @book = AgainBook.new
+    @user = current_user
+  end
 
   def create
     @user = current_user
