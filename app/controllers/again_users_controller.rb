@@ -21,6 +21,7 @@ class AgainUsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
+      flash[:success] = 'You have updated user successfully.'
       redirect_to again_user_path(@user.id)
     else
       render :edit
