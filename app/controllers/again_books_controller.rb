@@ -1,5 +1,4 @@
 class AgainBooksController < ApplicationController
-
   def index
     @books = AgainBook.all
     @book = AgainBook.new
@@ -27,9 +26,7 @@ class AgainBooksController < ApplicationController
 
   def update
     @book = AgainBook.find(params[:id])
-    if @book.update(again_book_params)
-      redirect_to again_book_path(@book)
-    end
+    redirect_to again_book_path(@book) if @book.update(again_book_params)
   end
 
   def destroy

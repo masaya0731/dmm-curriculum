@@ -1,5 +1,4 @@
 class AgainUsersController < ApplicationController
-
   def index
     @users = User.all
     @user = current_user
@@ -32,5 +31,4 @@ class AgainUsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image, :email, :password)
   end
-
 end
