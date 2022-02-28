@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  # Bookers1のコントローラー
   def index
     @post = ReviewPost.new
     @posts = ReviewPost.all

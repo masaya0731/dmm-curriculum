@@ -1,4 +1,5 @@
 class AgainUsersController < ApplicationController
+  # Bookers2のコントローラー
   def index
     @users = User.all
     @user = current_user

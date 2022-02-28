@@ -1,4 +1,5 @@
 class AgainBooksController < ApplicationController
+  # Bookers2のコントローラー
   def index
     @books = AgainBook.all
     @book = AgainBook.new
