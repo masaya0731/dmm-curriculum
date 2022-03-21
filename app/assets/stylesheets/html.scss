@@ -433,3 +433,64 @@
 }
 
 // HTML開発スキルアップ
+
+// ヘッダー
+.su-nav-logo {
+  width: 180px;
+  height: 55px;
+  background-image: url(skillup/skillup-logo.png);
+  background-size: cover;
+}
+
+.su-header {
+  width: 100%;
+  height: 70px;
+  background-color: #EC715F;
+}
+
+.su-nav {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  potision: relative;
+}
+
+.su-ul {
+  display: flex;
+  text-align: right;
+  position: absolute;
+  right: 200px;
+}
+
+.su-li {
+  color: white;
+  list-style: none;
+  line-height: 70px;
+  font-size: 16px;
+  margin: 0 30px;
+}
+
+// メインビジュアル
+.su-main-visual {
+  width: 100%;
+  height: 650px;
+  background-image: url(skillup/skillup-mv.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.su-main-visual-heading h2{
+  font-size: 64px;
+  color: #FAFAFA;
+  padding-top: 200px;
+  text-align: center;
+}
+
+.main-visual-text {
+  padding-top: 10px;
+  color: #FAFAFA;
+  font-size: 20px;
+}
+
+// ポートフォリオ
